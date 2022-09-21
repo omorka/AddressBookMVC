@@ -22,10 +22,10 @@ namespace AddressBook.Data.Migrations
                     Address2 = table.Column<string>(type: "text", nullable: true),
                     City = table.Column<string>(type: "text", nullable: false),
                     State = table.Column<string>(type: "text", nullable: false),
-                    Zip = table.Column<int>(type: "integer", nullable: false),
+                    Zip = table.Column<string>(type: "text", nullable: false),
                     Email = table.Column<string>(type: "text", nullable: false),
                     Phone = table.Column<string>(type: "text", nullable: false),
-                    Created = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    Created = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     ImageData = table.Column<byte[]>(type: "bytea", nullable: true),
                     ImageType = table.Column<string>(type: "text", nullable: true)
                 },

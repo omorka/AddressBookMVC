@@ -18,6 +18,7 @@ builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
 var dbContext = app.Services.CreateScope().ServiceProvider.GetRequiredService<ApplicationDbContext>();
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 await dbContext.Database.MigrateAsync();
 

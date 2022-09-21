@@ -35,14 +35,13 @@ namespace AddressBook.Data.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("Address2")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("City")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("Created")
+                    b.Property<DateTime?>("Created")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Email")
@@ -54,11 +53,9 @@ namespace AddressBook.Data.Migrations
                         .HasColumnType("text");
 
                     b.Property<byte[]>("ImageData")
-                        .IsRequired()
                         .HasColumnType("bytea");
 
                     b.Property<string>("ImageType")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("LastName")
@@ -73,8 +70,9 @@ namespace AddressBook.Data.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("Zip")
-                        .HasColumnType("integer");
+                    b.Property<string>("Zip")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 

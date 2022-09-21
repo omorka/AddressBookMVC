@@ -14,13 +14,15 @@ namespace AddressBook.Models
         public string LastName { get; set; }
 
         [Required]
+        [Display(Name = "Address 1")]
         public string Address1 { get; set; }
+        [Display(Name = "Address 2")]
         public string? Address2 { get; set; }
         public string City { get; set; }
         public string State { get; set; }
 
         [DataType(DataType.PostalCode)]
-        public int Zip { get; set; }
+        public string Zip { get; set; }
 
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
